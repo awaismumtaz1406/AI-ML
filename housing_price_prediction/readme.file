@@ -1,0 +1,92 @@
+# Question 2: Housing Price Prediction Using Linear Regression
+
+## Project Overview
+This project predicts house prices using **Linear Regression**, a supervised machine learning algorithm. The model learns the relationship between house features and their prices using a sample housing dataset.
+
+## Dataset
+- **Dataset type:** Synthetic dataset (created for this assignment).
+- **Number of records:** 30 cleaned records.
+- **Input features:**
+  - Area (square feet)
+  - Number of bedrooms
+  - Number of bathrooms
+  - Location
+- **Target variable:** House price (PKR).
+
+The dataset also includes examples of missing values, duplicate records, and an unrealistic price outlier to demonstrate data cleaning.
+
+## Technologies and Libraries
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+
+## Project Workflow
+
+### 1. Data Inspection and Cleaning
+- Checked dataset shape and data types.
+- Generated descriptive statistics.
+- Identified and handled missing values.
+- Removed duplicate records.
+- Identified and handled an unrealistic outlier.
+
+### 2. Data Preprocessing
+- Selected relevant input features and target variable.
+- Applied One-Hot Encoding to the categorical location feature.
+- Applied Standard Scaling to numerical features.
+- Split the dataset into 80% training data and 20% testing data.
+- Used a Pipeline to prevent data leakage during preprocessing.
+
+### 3. Model Training and Prediction
+- Trained a Linear Regression model.
+- Displayed model coefficients and intercept.
+- Predicted prices for test observations.
+- Predicted the price of a new house using manually provided inputs.
+
+### 4. Model Evaluation
+The model was evaluated using:
+
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R-squared (R²)
+
+An actual-versus-predicted scatter plot and a prediction error table were also generated.
+
+## How to Run the Project
+
+### Step 1: Install Required Libraries
+
+```bash
+python -m pip install pandas numpy matplotlib scikit-learn
+```
+
+### Step 2: Run the Python File
+
+```bash
+python housing_price_prediction.py
+```
+
+## Sample Model Results
+
+| Evaluation Metric | Result |
+|---|---:|
+| MAE | PKR 161,837.21 |
+| MSE | 32,015,739,145.93 |
+| RMSE | PKR 178,929.43 |
+| R² Score | 0.9931 |
+
+**Note:** These results are based on a small synthetic dataset. They demonstrate the model workflow and should not be considered real-world housing market accuracy.
+
+## Project Files
+
+- `housing_price_prediction.py` - Complete Python implementation.
+- `screenshots/` - Screenshots of data inspection, cleaning, preprocessing, model training, predictions, evaluation metrics, and plots.
+
+## Conclusion
+
+
+
+
+This project demonstrates the complete machine learning workflow, from data inspection and preprocessing to training a Linear Regression model and evaluating its predictions. It also highlights how data quality and feature selection can affect prediction performance.
